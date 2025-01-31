@@ -6,16 +6,16 @@
         "segments": [
 
           {
-            "background": "#6272a4",
-            "foreground": "#f8f8f2",
+            "background": "#b18bb1",
+            "foreground": "#d9cbb5",
             "leading_diamond": "\u256d\u2500\ue0b6",
             "style": "diamond",
             "template":"{{ if .SSHSession }}\ueba9 {{ end }}{{ .UserName }}@{{ .HostName }} ",
             "type": "session"
           },
           {
-            "background": "#8be9fd",
-            "foreground": "#282a36",
+            "background": "#90adc6",
+            "foreground": "#292828",
             "powerline_symbol": "\ue0b0",
             "properties": {
               "style":"full"
@@ -26,14 +26,14 @@
             "type": "path"
           },
           {
-            "background": "#50fa7b",
+            "background": "#9fca9f",
             "background_templates": [
-              "{{ if or (.Working.Changed) (.Staging.Changed) }}#ffb86c{{ end }}",
-              "{{ if and (gt .Ahead 0) (gt .Behind 0) }}#f1fa8c{{ end }}",
-              "{{ if gt .Ahead 0 }}#bd93f9{{ end }}",
-              "{{ if gt .Behind 0 }}#bd93f9{{ end }}"
+              "{{ if or (.Working.Changed) (.Staging.Changed) }}#f2a272{{ end }}",
+              "{{ if and (gt .Ahead 0) (gt .Behind 0) }}#f4d58d{{ end }}",
+              "{{ if gt .Ahead 0 }}#b18bb1{{ end }}",
+              "{{ if gt .Behind 0 }}#b18bb1{{ end }}"
             ],
-            "foreground": "#282a36",
+            "foreground": "#292828",
             "powerline_symbol": "\ue0b0",
             "properties": {
               "fetch_stash_count": true,
@@ -45,8 +45,8 @@
             "type": "git"
           },
           {
-            "background": "#bd93f9",
-            "foreground": "#282a36",
+            "background": "#e28f92",
+            "foreground": "#292828",
             "powerline_symbol": "\ue0b0",
             "properties": {
               "always_enabled": true
@@ -56,11 +56,11 @@
             "type": "executiontime"
           },
           {
-            "background": "#f1fa8c",
+            "background": "#f4d58d",
             "background_templates": [
-              "{{ if gt .Code 0 }}#ff5555{{ end }}"
+              "{{ if gt .Code 0 }}#e28f92{{ end }}"
             ],
-            "foreground": "#282a36",
+            "foreground": "#292828",
             "properties": {
               "always_enabled": true
             },
@@ -76,8 +76,8 @@
         "alignment": "right",
         "segments": [
           {
-            "background": "#ffb86c",
-            "foreground": "#282a36",
+            "background": "#f2a272",
+            "foreground": "#292828",
             "invert_powerline": true,
             "powerline_symbol": "\ue0b2",
             "style": "powerline",
@@ -85,22 +85,22 @@
             "type": "shell"
           },
           {
-            "background": "#50fa7b",
+            "background": "#9fca9f",
             "invert_powerline": true,
             "powerline_symbol": "\ue0b2",
             "background_templates": [
-              "{{if eq \"Charging\" .State.String}}#50fa7b{{end}}",
-              "{{if eq \"Discharging\" .State.String}}#50fa7b{{end}}",
-              "{{if eq \"Full\" .State.String}}#50fa7b{{end}}"
+              "{{if eq \"Charging\" .State.String}}#9fca9f{{end}}",
+              "{{if eq \"Discharging\" .State.String}}#9fca9f{{end}}",
+              "{{if eq \"Full\" .State.String}}#9fca9f{{end}}"
             ],
-            "foreground": "#282a36",
+            "foreground": "#292828",
             "style": "powerline",
             "template": "{{ if not .Error }}{{ .Icon }}{{ .Percentage }}{{ end }}{{ .Error }}\uf295 \ueb2d ",
             "type": "battery"
           },
           {
-            "background": "#8be9fd",
-            "foreground": "#282a36",
+            "background": "#90adc6",
+            "foreground": "#292828",
             "invert_powerline": true,
             "trailing_diamond": "\ue0b4",
             "style": "diamond",
@@ -115,21 +115,21 @@
         "newline": true,
         "segments": [
           {
-            "foreground": "#f8f8f2",
+            "foreground": "#d9cbb5",
             "style": "plain",
             "template": "\u2570\u2500",
             "type": "text"
           },
           {
-            "foreground": "#6272a4",
+            "foreground": "#b18bb1",
             "foreground_templates": [
-              "{{ if gt .Code 0 }}#ff5555{{ end }}"
+              "{{ if gt .Code 0 }}#e28f92{{ end }}"
             ],
             "properties": {
               "always_enabled": true
             },
             "style": "plain",
-            "template": "<#bd93f9>\u276f</><#50fa7b>\u276f</><#f1fa8c>\u276f</> ",
+            "template": "<#b18bb1>\u276f</><#9fca9f>\u276f</><#f4d58d>\u276f</> ",
             "type": "status"
           }
         ],
